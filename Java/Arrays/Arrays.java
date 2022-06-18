@@ -52,7 +52,7 @@ public class Arrays {
             System.out.println(Names[i]+"'s weight is "+weight[i]+" Kg");
     
         }
-*/
+
         //Upadate Array Values
         String[] Names={"Rupan", "Jinea", "Mau", "Yathu", "Vanu", "miki", "thanu"};
         Double[] weight={35.7d, 67.5d, 45.8d, 55.8d, 37.9d, 50d, 63.2d};       
@@ -64,6 +64,17 @@ public class Arrays {
             System.out.println(Names[i]+"'s weight is "+weight[i]+" Kg");
     
         }
+*/
+        //Largest number in array
+        double[] numArray = { 23.4, -34.5, 50.0, 33.5, 55.5, 43.7, 5.7, -66.5, 99 };
+
+        double larger= numArray[0];
+        for (int i=0; i< numArray.length; i++){
+            if (larger < numArray[i]){
+                larger = numArray[i];
+            }
+        }
+        System.out.println("The big no is "+larger);
  
     }
     
