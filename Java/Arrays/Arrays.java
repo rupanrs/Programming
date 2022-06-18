@@ -44,7 +44,7 @@ public class Arrays {
         for (int i=0; i< weight.length; i++){
             System.out.println("Weight "+i+" is "+weight[i]+" Kg");
         }
-*/
+
         //String Array
         String[] Names={"Rupan", "Jinea", "Mau", "Yathu", "Vanu", "miki", "thanu"};
         Double[] weight={35.7d, 67.5d, 45.8d, 55.8d, 37.9d, 50d, 63.2d};       
@@ -52,8 +52,18 @@ public class Arrays {
             System.out.println(Names[i]+"'s weight is "+weight[i]+" Kg");
     
         }
+*/
+        //Upadate Array Values
+        String[] Names={"Rupan", "Jinea", "Mau", "Yathu", "Vanu", "miki", "thanu"};
+        Double[] weight={35.7d, 67.5d, 45.8d, 55.8d, 37.9d, 50d, 63.2d};       
+        
+        Names[2]="Sanjeev";
+        weight[2]=65.4d;
 
-
+        for (int i=0; i< Names.length; i++){
+            System.out.println(Names[i]+"'s weight is "+weight[i]+" Kg");
+    
+        }
  
     }
     
