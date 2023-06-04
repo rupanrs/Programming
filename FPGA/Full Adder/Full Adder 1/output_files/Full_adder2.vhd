@@ -1,0 +1,91 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity Full_adder2 is 
+		Port	(	A,B,C: in STD_LOGIC;
+					CLK: in STD_LOGIC;
+					SUM,CARRY: out STD_LOGIC;
+			
+					A1 : out STD_LOGIC;
+					B1 : out STD_LOGIC;
+					C1 : out STD_LOGIC;
+					D1 : out STD_LOGIC;
+					E1 : out STD_LOGIC;
+					F1 : out STD_LOGIC;
+					G1 : out STD_LOGIC;
+						
+					A2 : out STD_LOGIC;
+					B2 : out STD_LOGIC;
+					C2 : out STD_LOGIC;
+					D2 : out STD_LOGIC;
+					E2 : out STD_LOGIC;
+					F2 : out STD_LOGIC;
+					G2 : out STD_LOGIC);
+					
+end Full_adder2;
+
+architecture Behavioral of Full_adder2 is 
+
+	signal P,Q,R,S: STd_LOGIC;
+	
+begin	
+	P<= A XOR B;
+	Q<= A AND B;
+	R<= P XOR C;
+	S<= Q or (P and C);
+	
+	process(CLK)
+		begin
+			if S = '1' then -- 0100100
+				A2 <= '0';
+				B2 <= '1';
+				C2 <= '0';
+				D2 <= '0';
+				E2 <= '1';
+				F2 <= '0';
+				G2 <= '0';
+				
+			end if;
+			
+			if S = '0' then -- 0000001
+				A2 <= '0';
+				B2 <= '0';
+				C2 <= '0';
+				D2 <= '0';
+				E2 <= '0';
+				F2 <= '0';
+				G2 <= '1';
+				
+			end if;
+			
+			if R = '1' then -- 0110001
+				A1 <= '0';
+				B1 <= '1';
+				C1 <= '1';
+				D1 <= '0';
+				E1 <= '0';
+				F1 <= '0';
+				G1 <= '1';
+				
+			end if;
+			
+			if R = '0' then -- 0000001
+				A1 <= '0';
+				B1 <= '0';
+				C1 <= '0';
+				D1 <= '0';
+				E1 <= '0';
+				F1 <= '0';
+				G1 <= '1';
+				
+			end if;
+			
+	end process;
+
+end behavioral;
+			
+			
+	
+	
+
+					

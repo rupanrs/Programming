@@ -1,0 +1,18 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity Full_adder is
+Port (A,	B,C: in STD_LOGIC;
+		X,Y: out STD_LOGIC);
+end Full_adder;
+
+architecture Behavioral of Full_adder is
+
+signal M,N: STD_LOGIC;
+
+begin
+
+	X<=(A xor B) xor C;
+	Y<=((A xor B)and C) or (A and B);
+
+end architecture behavioral;
